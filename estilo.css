@@ -1,0 +1,639 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #211C21;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos del encabezado */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3498db;
+    padding: 15px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin: -10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+  margin: 10px;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.buscador {
+    display: flex;
+}
+
+.buscador input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.productos h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.buscador button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* encabezado pantalla chica */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav ul li:hover::after {
+    width: 100%;
+  }
+
+  .buscador {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .buscador input {
+    width: 80%;
+  }
+}
+
+
+/* Sección de productos */
+.productos {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 100px;
+}
+
+.productos-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;   
+}
+
+.botonesProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.producto {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+    gap: 15px;
+    display: grid;
+    min-width: 200px;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    min-height: 130px;
+    box-shadow: 0px 0px 5px 2.5px #080000;
+}
+
+.producto h3 {
+    margin: 10px 0;
+}
+
+.producto p {
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+.producto button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 50px;
+    
+}
+
+.producto .btnAdd{
+    background: #cc5b2eec;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: end;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.producto .btnAdd:hover {
+    background: #ff7b00;
+}
+
+.producto button:hover {
+    background: #27ae60;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
+    margin-top: auto;
+}
+
+
+
+/* categorias.html */
+
+.productos-pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajusta la altura del contenedor principal */
+    padding: 20px;
+    
+}
+
+.productos-botones-container {
+  margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-height: 72vh;
+    overflow-y: scroll;
+}
+
+.producto-boton {
+    background: #f4f4f4;
+    color: #333;
+    padding: 15px 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.producto-boton:hover {
+    background-color: #e0e0e0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ofertas.html */
+
+.offers {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #211C21;
+    color: white;
+}
+
+.offers-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offers-container img{
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.cardBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%; /* Ajusta la altura del contenedor principal */
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.cardBottom h3{
+    max-width: 140px; /* Ajusta el ancho máximo según tus necesidades */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Muestra los puntos suspensivos */
+}
+
+.offer-card {
+    background: #3498db;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    display: flex; /* Añadimos Flexbox */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    align-items: center; /* Centramos los elementos horizontalmente */
+    box-shadow: #fdfcfc 0px 0px 10px 5px;
+    transition: all 0.3s ease-out; /* Añadimos una transición suave */
+  }
+
+  .offer-card:hover{
+    box-shadow: #fdfcfc 0px 0px 20px 10px;
+  }
+  
+  .offer-card img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 150px; /* Ajusta la altura máxima si es necesario */
+    object-fit: contain; /* Evita que la imagen se deforme */
+  }
+  
+
+.old-price {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.new-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.buy-button {
+    background: white;
+    color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background: #f1c40f;
+}
+
+
+/* carrito.html */
+
+h1 {
+    margin: 0;
+  }
+  
+  .carrito {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #2e2a2e;
+    border-radius: 10px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    background-color: #3a353a;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  
+  .detalle {
+    flex-grow: 1;
+  }
+  
+  .eliminar {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .eliminar:hover {
+    background-color: #c0392b;
+  }
+  
+  .total {
+    text-align: right;
+    margin-top: 2rem;
+  }
+  
+.botonesCarrito{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .pagar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .back {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+  .pagar:hover {
+    background-color: #2980b9;
+  }
+
+  .back:hover {
+    background-color: #2980b9;
+  }
+
+  .carrito h3, p{
+    color: white;
+    margin-bottom: 6px;
+  }
+
+  /* contacto.html */
+  .contacto {
+    background-color: #2e2a2e;
+    padding: 40px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contacto h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contacto p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contacto label {
+    font-size: 1rem;
+    color: #fff7ff;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contacto input,
+  .contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #3a353a;
+    color: white;
+  }
+  
+  .contacto button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .contacto button:hover {
+    background-color: #2980b9;
+  }
+  
+/* metodos_pago.html */
+
+.metodos-pago {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .metodo {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: #3a353a;
+    border-radius: 8px;
+    width: 250px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition : transform 0.3s ease;
+  }
+
+  .metodo.seleccionado {
+    background-color: #075c94;
+    color: white;
+  }
+  
+  .metodo:hover {
+    transform: scale(1.10);
+  }
+
+  .metodo-img {
+    max-width: 100%;
+    height: auto;
+    min-height: 188px;
+    margin-bottom: 15px;
+  }
+  
+  .metodo h3 {
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  .metodo p {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .cardPago {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #3a353a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+  }
+
+  .cardPago h2 {
+    color: #3498db;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .cardPago h3 {
+    color: white;
+    margin-left: 30px;
+  }
+
+  .cardPago button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .cardPago button:hover {
+    background-color: #2980b9;
+  }

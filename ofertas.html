@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo">
+            <h1>TecnoParts</h1>
+            <button style="margin-left: auto;"class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="offers">
+        <h2 style="margin-bottom: 80px; font-size: 45px;">Ofertas Especiales</h2>
+        <div class="offers-container">
+            <div class="offer-card">
+                <img src="imagenes/ofer1.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Headset Logitech G733</h3>
+                     <p class="old-price">$3.873</p>
+                     <p class="new-price">$2.488</p>
+                     <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer2.png" alt="Producto en oferta">
+                <div class="cardBottom"></div>
+                <h3>Memoria USB HP 2TB</h3>
+                <p class="old-price">$793</p>
+                <p class="new-price">$630</p>
+                <button class="buy-button" onclick="irPago(this)">Comprar</button>
+             </div>
+             <div class="offer-card">
+                <img src="imagenes/ofer3.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Teclado Mecánico HyperX Alloy FPS Pro</h3>
+                    <p class="old-price">$2,800</p>
+                    |<p class="new-price">$2,200</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer4.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>SSD Samsung 970 EVO Plus 1TB NVMe</h3>
+                    <p class="old-price">$3,500</p>
+                    <p class="new-price">$2,900</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer5.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Monitor Curvo 27" LG UltraGear 144Hz</h3>
+                    <p class="old-price">$6,500</p>
+                    |<p class="new-price">$5,800</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer6.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Tarjeta Gráfica NVIDIA GeForce RTX 3060 Ti</h3>
+                    <p class="old-price">$9,000</p>
+                    <p class="new-price">$8,200</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer7.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Procesador Intel Core i7-12700K</h3>
+                    <p class="old-price">$7,000</p>
+                    <p class="new-price">$6,300</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer8.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Fuente de Poder Corsair RM750x 750W 80+ Gold</h3>
+                    <p class="old-price">$2,500</p>
+                    <p class="new-price">$2,100</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer9.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Memoria RAM Corsair Vengeance LPX 32GB (2x16GB) DDR4 3200MHz</h3>
+                    <p class="old-price">$3,000</p>
+                    <p class="new-price">$2,600</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer10.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Gabinete NZXT H510 Flow</h3>
+                    <p class="old-price">$2,200</p>
+                    <p class="new-price">$1,900</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer11.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Mouse Logitech G Pro Wireless</h3>
+                    <p class="old-price">$2,700</p>
+                    <p class="new-price">$2,300</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer12.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Disco Duro Externo Seagate 4TB</h3>
+                    <p class="old-price">$2,000</p>
+                    <p class="new-price">$1,700</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer13.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Router WiFi 6 ASUS RT-AX82U</h3>
+                    <p class="old-price">$3,200</p>
+                    <p class="new-price">$2,800</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer14.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Impresora Multifuncional HP LaserJet Pro M15w</h3>
+                    <p class="old-price">$2,300</p>
+                    <p class="new-price">$2,000</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer15.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Altavoces Logitech Z623 2.1</h3>
+                    <p class="old-price">$2,600</p>
+                    <p class="new-price">$2,200</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="imagenes/ofer16.png" alt="Producto en oferta">
+                <div class="cardBottom">
+                    <h3>Webcam Logitech C920s HD Pro</h3>
+                    <p class="old-price">$1,800</p>
+                    <p class="new-price">$1,500</p>
+                    <button class="buy-button" onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 TecnoParts - Todos los derechos reservados</p>
+    </footer>
+    <script src="pagoC.js"></script>
+</body>
+</html>

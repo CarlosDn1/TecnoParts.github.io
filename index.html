@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoParts</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Encabezado con logotipo y menú --> 
+    <header>
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo">
+            <h1>TecnoParts</h1>
+            <button style="margin-left: auto;"class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+
+        
+
+        <nav>
+            <ul>
+                <li><a href="categorias.html"">Categorias</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+        <div class="buscador">
+            <input type="text" id="buscador-input" placeholder="Buscar productos...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-container" id="productos-container">
+            <div class="producto">
+                <img src="imagenes/producto1.jpg" alt="Producto 1">
+                <img src="imagenes/benchmark2.jpg" alt="Benchmark Intel i9" class="benchmarkcorei9-img">
+                <h3 class="nombre">Procesador Intel Core i9 14900K</h3>
+                <p class="precio">$21.900</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <img src="imagenes/producto2.jpg" alt="Producto 2">
+                <img src="imagenes/benchmark1.jpg" alt="Tarjeta Grafica RTX 5090  (NUEVO)" class="benchmark5090-img">
+                <h3 class="nombre">Tarjeta Gráfica RTX 5090</h3>
+                <p class="precio">$41.999</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+    
+            <div class="producto">
+                <img src="imagenes/producto3.jpg" alt="Producto 3">
+                <img src="imagenes/benchmark3.jpg" alt="SSD 1TB WESTERN DIGITAL" class="benchmarkssd-img">
+                <h3 class="nombre">SSD 1TB WESTERN DIGITAL</h3>
+                <p class="precio">$3.499</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/producto4.png" alt="Producto 3">
+                <img src="imagenes/benchmark4.png" alt="SSD 1TB WESTERN DIGITAL" class="benchmarkssd-img">
+                <h3 class="nombre">Memoria RAM Adata XPG Lancer Black RGB DDR5 6400 Mhz</h3>
+                <p class="precio">$2.999</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/producto5.png" alt="Producto 3">
+                <img src="imagenes/benchmark5.png" alt="SSD 1TB WESTERN DIGITAL" class="benchmarkssd-img">
+                <h3 class="nombre">Procesador Amd 7 5700g 3.8Ghz</h3>
+                <p class="precio">$2.892,39</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/producto6.png" alt="Producto 3">
+                <img src="imagenes/benchmark6.png" alt="SSD 1TB WESTERN DIGITAL" class="benchmarkssd-img">
+                <h3 class="nombre">Tarjeta De Video Amd Radeon Rx 6800 Sapphire</h3>
+                <p class="precio">$18.299</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/producto7.png" alt="Producto 1">
+                <img src="imagenes/benchmark7.png" alt="Benchmark Intel i9" class="benchmarkcorei9-img">
+                <h3 class="nombre">Tarjeta De Vídeo Geforce Gtx 1080ti De 11 G</h3>
+                <p class="precio">$7.500</p>
+                <div class="botonesProducto">
+                <button class="btnAdd">Añadir 🛒</button>
+                <button onclick="irPago(this)">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TecnoParts - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="carrito.js"></script>
+    <script src="codigos.js"></script>
+</body>
+</html>
